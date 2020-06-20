@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/directions")
-public class DirectionsController {
+@RequestMapping("/location")
+public class LocationController {
 
     @Autowired
     private LocationService locationService;
@@ -37,7 +37,7 @@ public class DirectionsController {
 
         List<Location> positions = this.locationService.findCoordinatesBy(locations);
         if(positions == null || positions.isEmpty()){
-            return null;
+            throw new NotFoundException("Not found");
         }
         return positions;
     }
