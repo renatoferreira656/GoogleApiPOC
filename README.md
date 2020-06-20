@@ -1,6 +1,6 @@
 # GoogleApiPOC
 _______
-[![<ORG_NAME>](https://circleci.com/gh/renatoferreira656/GoogleApiPOC.svg?style=svg)](<LINK>)
+[![<ORG_NAME>](https://circleci.com/gh/renatoferreira656/GoogleApiPOC.svg?style=svg)](https://app.circleci.com/pipelines/github/renatoferreira656/GoogleApiPOC)
 
 ### Setup
 
