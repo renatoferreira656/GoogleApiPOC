@@ -22,7 +22,7 @@ public class FilesHelper {
             Set<String> lines = new HashSet<>();
             String line = reader.readLine();
             while(line != null){
-                lines.add(line);
+                lines.add(line.trim());
                 line = reader.readLine();
             }
             return lines;

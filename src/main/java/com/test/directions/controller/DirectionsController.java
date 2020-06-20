@@ -3,7 +3,7 @@ package com.test.directions.controller;
 import com.test.directions.helper.FilesHelper;
 import com.test.directions.http.BadRequestException;
 import com.test.directions.http.NotFoundException;
-import com.test.directions.model.geocode.GeoPoint;
+import com.test.directions.model.Location;
 import com.test.directions.service.DirectionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,21 +20,26 @@ public class DirectionsController {
     private DirectionsService directionsService;
 
     @GetMapping("/coordinates")
-    public GeoPoint coordinates(@RequestParam(value="location") String location) {
-        GeoPoint geoPoint = this.directionsService.findCoordinatesBy(location);
-        if(geoPoint == null){
+    public Location coordinates(@RequestParam(value="location") String location) {
+        Location position = this.directionsService.findCoordinatesBy(location);
+        if(position == null){
             throw new NotFoundException("Not found");
         }
-        return geoPoint;
+        return position;
     }
 
     @PostMapping("/coordinates/batch")
-    public List<GeoPoint> coordinates(@RequestParam("file") MultipartFile file) {
+    public List<Location> coordinates(@RequestParam("file") MultipartFile file) {
         Set<String> locations = FilesHelper.readAllFile(file);
         if(locations == null || locations.isEmpty()){
             throw new BadRequestException("file is empty or invalid");
         }
-        return null;
+
+        List<Location> positions = this.directionsService.findCoordinatesBy(locations);
+        if(positions == null || positions.isEmpty()){
+            return null;
+        }
+        return positions;
     }
 
     @Autowired
