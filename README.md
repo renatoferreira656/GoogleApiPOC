@@ -16,7 +16,7 @@ With Java configured to start the web server just execute:
 #### Windows:
 
 ```
-./mvnw.cmd spring-boot:run
+mvnw.cmd spring-boot:run
 ```
 
 ### Environment variable 
@@ -29,9 +29,16 @@ To Access the Google API an `Api-Key` is needed, to pass this variable to the ap
 GOOGLE_API_KEY="Api-Key from google" ./mvnw spring-boot:run 
 ```
 
-#### Windows
+#### Windows (Prompt Comando)
 ```
-GOOGLE_API_KEY="Api-Key from google" ./mvnw.cmd spring-boot:run
+set GOOGLE_API_KEY=APIKEYFROMGOOGLE
+mvnw.cmd spring-boot:run
+```
+
+#### Windows (GitBash)
+```
+GOOGLE_API_KEY="Api-Key from google" ./mvnw spring-boot:run 
+./mvnw spring-boot:run
 ```
 
 
