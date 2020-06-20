@@ -1,5 +1,6 @@
 package com.test.directions.service;
 
+import com.test.directions.helper.URLHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -14,9 +15,8 @@ public class HTTPService {
     private RestTemplate restTemplate;
 
     public <T> T get(Class<T> clazz, String url, Map<String, String> params) {
-        final UriComponentsBuilder uriBuilder = UriComponentsBuilder.fromHttpUrl(url);
-        params.forEach(uriBuilder::queryParam);
-        ResponseEntity<T> forEntity = restTemplate.getForEntity(uriBuilder.build(false).toUriString(), clazz);
+        String urlWithParams = URLHelper.formatURL(url, params);
+        ResponseEntity<T> forEntity = restTemplate.getForEntity(urlWithParams, clazz);
         return forEntity.getBody();
     }
 
