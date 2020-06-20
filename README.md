@@ -6,7 +6,7 @@ _______
 
 This application use SpringFramework stack with JAVA `1.8.0_251`.
 
-With Java configured to start the web server just execute:
+With Java configured, start the web server executing:
 
 #### Linux:
 ```
@@ -21,15 +21,17 @@ mvnw.cmd spring-boot:run
 
 ### Environment variable 
 
-To Access the Google API an `Api-Key` is needed, to pass this variable to the application you export 
-`GOOGLE_API_KEY` as an Environment Variable. Also is possible to pass as follows:
+To Access the Google Geocoding API an api key is needed, to provide this variable to the application you need to export 
+`GOOGLE_API_KEY` as an environment variable. 
+
+It's also possible to provide as follows:
 
 #### Linux
 ```
 GOOGLE_API_KEY="Api-Key from google" ./mvnw spring-boot:run 
 ```
 
-#### Windows (Prompt Comando)
+#### Windows (Command Prompt)
 ```
 set GOOGLE_API_KEY=APIKEYFROMGOOGLE
 mvnw.cmd spring-boot:run
@@ -38,7 +40,6 @@ mvnw.cmd spring-boot:run
 #### Windows (GitBash)
 ```
 GOOGLE_API_KEY="Api-Key from google" ./mvnw spring-boot:run 
-./mvnw spring-boot:run
 ```
 
 
@@ -46,7 +47,7 @@ Now the port `8080` is open for request.
 
 ### Web Page:
 
-Accessing the root of `8080` will be a webpage available to help test the endpoints.
+Accessing the root of `8080`, a webpage will be available to help test the endpoints.
 
 ###### Default URL:
 ``` 
