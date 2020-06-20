@@ -1,5 +1,6 @@
 package com.test.directions.controller;
 
+import com.test.directions.http.NotFoundException;
 import com.test.directions.model.geocode.GeoPoint;
 import com.test.directions.service.DirectionsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,11 @@ public class DirectionsController {
 
     @GetMapping("/coordinates")
     public GeoPoint coordinates(@RequestParam(value="location") String location) {
-        return this.directionsService.findCoordinatesBy(location);
+        GeoPoint geoPoint = this.directionsService.findCoordinatesBy(location);
+        if(geoPoint == null){
+            throw new NotFoundException("Not found");
+        }
+        return geoPoint;
     }
 
     @Autowired
