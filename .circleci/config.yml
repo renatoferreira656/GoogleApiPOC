@@ -6,4 +6,4 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: ./mvnw clean install
+      - run: ./mvnw clean install -B
