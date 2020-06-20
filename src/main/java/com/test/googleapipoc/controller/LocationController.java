@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/location")
+@RequestMapping("/api/location")
 public class LocationController {
 
     @Autowired
