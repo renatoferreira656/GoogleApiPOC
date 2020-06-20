@@ -24,7 +24,7 @@ public class Location {
         l.locationQuery = location;
         l.formattedAddress = formattedAddress;
         l.geoPoint = geoPoint;
-        l.status = GeoPointStatus.RESOLVED;
+        l.status = GeoPointStatus.FOUND;
         return l;
     }
 

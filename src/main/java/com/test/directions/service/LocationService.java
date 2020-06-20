@@ -12,7 +12,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Component
-public class DirectionsService {
+public class LocationService {
 
     @Value("${spring.google.api.key}")
     private String googleApiKey;
@@ -24,11 +24,11 @@ public class DirectionsService {
         Map<String, String> query = new HashMap<>();
         query.put("address", location);
         query.put("key", googleApiKey);
-        GeoCodeResults json = httpService.get(GeoCodeResults.class, "https://maps.googleapis.com/maps/api/geocode/json", query);
-        if(json.getResults().isEmpty()){
+        List<GeoCodeInfo> result = httpService.get(GeoCodeResults.class, "https://maps.googleapis.com/maps/api/geocode/json", query).getResults();
+        if(result==null || result.isEmpty()){
             return Collections.singletonList(Location.notFound(location));
         }
-        return json.getResults().stream().map(geoCodeInfo -> {
+        return result.stream().map(geoCodeInfo -> {
             GeoPoint geoPoint = geoCodeInfo.getGeometry().getLocation();
             String formattedAddress = geoCodeInfo.getFormattedAddress();
             return Location.found(location, formattedAddress, geoPoint);

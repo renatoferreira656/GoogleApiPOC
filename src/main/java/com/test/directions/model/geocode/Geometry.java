@@ -8,7 +8,8 @@ public class Geometry {
         return location;
     }
 
-    public void setLocation(GeoPoint location) {
+    public Geometry setLocation(GeoPoint location) {
         this.location = location;
+        return this;
     }
 }

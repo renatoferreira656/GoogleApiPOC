@@ -4,7 +4,7 @@ import com.test.directions.helper.FilesHelper;
 import com.test.directions.http.BadRequestException;
 import com.test.directions.http.NotFoundException;
 import com.test.directions.model.Location;
-import com.test.directions.service.DirectionsService;
+import com.test.directions.service.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,11 +17,11 @@ import java.util.Set;
 public class DirectionsController {
 
     @Autowired
-    private DirectionsService directionsService;
+    private LocationService locationService;
 
     @GetMapping("/coordinates")
     public List<Location>  coordinates(@RequestParam(value="location") String location) {
-        List<Location> positions = this.directionsService.findCoordinatesBy(location);
+        List<Location> positions = this.locationService.findCoordinatesBy(location);
         if(positions == null || positions.isEmpty()){
             throw new NotFoundException("Not found");
         }
@@ -35,7 +35,7 @@ public class DirectionsController {
             throw new BadRequestException("file is empty or invalid");
         }
 
-        List<Location> positions = this.directionsService.findCoordinatesBy(locations);
+        List<Location> positions = this.locationService.findCoordinatesBy(locations);
         if(positions == null || positions.isEmpty()){
             return null;
         }
@@ -43,7 +43,7 @@ public class DirectionsController {
     }
 
     @Autowired
-    public void setDirectionsService(DirectionsService directionsService) {
-        this.directionsService = directionsService;
+    public void setLocationService(LocationService locationService) {
+        this.locationService = locationService;
     }
 }

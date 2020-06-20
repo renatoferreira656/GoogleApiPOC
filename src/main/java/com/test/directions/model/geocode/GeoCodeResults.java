@@ -9,7 +9,8 @@ public class GeoCodeResults {
                 return results;
         }
 
-        public void setResults(List<GeoCodeInfo> results) {
+        public GeoCodeResults setResults(List<GeoCodeInfo> results) {
                 this.results = results;
+                return this;
         }
 }

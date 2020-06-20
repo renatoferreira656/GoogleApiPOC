@@ -12,15 +12,17 @@ public class GeoCodeInfo {
         return formattedAddress;
     }
 
-    public void setFormattedAddress(String formattedAddress) {
+    public GeoCodeInfo setFormattedAddress(String formattedAddress) {
         this.formattedAddress = formattedAddress;
+        return this;
     }
 
     public Geometry getGeometry() {
         return geometry;
     }
 
-    public void setGeometry(Geometry geometry) {
+    public GeoCodeInfo setGeometry(Geometry geometry) {
         this.geometry = geometry;
+        return this;
     }
 }
