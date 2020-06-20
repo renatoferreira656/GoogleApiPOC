@@ -1,4 +1,4 @@
-package com.test.directions.http;
+package com.test.googleapipoc.http;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

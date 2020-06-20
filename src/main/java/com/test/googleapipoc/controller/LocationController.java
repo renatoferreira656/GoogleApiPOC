@@ -1,10 +1,10 @@
-package com.test.directions.controller;
+package com.test.googleapipoc.controller;
 
-import com.test.directions.helper.FilesHelper;
-import com.test.directions.http.BadRequestException;
-import com.test.directions.http.NotFoundException;
-import com.test.directions.model.Location;
-import com.test.directions.service.LocationService;
+import com.test.googleapipoc.helper.FilesHelper;
+import com.test.googleapipoc.http.BadRequestException;
+import com.test.googleapipoc.http.NotFoundException;
+import com.test.googleapipoc.model.Location;
+import com.test.googleapipoc.service.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

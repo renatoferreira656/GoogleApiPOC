@@ -1,4 +1,4 @@
-package com.test.directions.model.geocode;
+package com.test.googleapipoc.model.geocode;
 
 public class Geometry {
 

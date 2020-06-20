@@ -1,4 +1,4 @@
-package com.test.directions;
+package com.test.googleapipoc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class DirectionsApplication {
+public class GoogleApiPOCApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DirectionsApplication.class, args);
+		SpringApplication.run(GoogleApiPOCApplication.class, args);
 	}
 
 	@Bean

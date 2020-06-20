@@ -1,6 +1,6 @@
-package com.test.directions.model;
+package com.test.googleapipoc.model;
 
-import com.test.directions.model.geocode.GeoPoint;
+import com.test.googleapipoc.model.geocode.GeoPoint;
 
 public class Location {
 

@@ -1,9 +1,9 @@
-package com.test.directions.service;
+package com.test.googleapipoc.service;
 
-import com.test.directions.model.Location;
-import com.test.directions.model.geocode.GeoCodeInfo;
-import com.test.directions.model.geocode.GeoCodeResults;
-import com.test.directions.model.geocode.GeoPoint;
+import com.test.googleapipoc.model.Location;
+import com.test.googleapipoc.model.geocode.GeoCodeInfo;
+import com.test.googleapipoc.model.geocode.GeoCodeResults;
+import com.test.googleapipoc.model.geocode.GeoPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
-package com.test.directions.service;
+package com.test.googleapipoc.service;
 
-import com.test.directions.helper.URLHelper;
+import com.test.googleapipoc.helper.URLHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

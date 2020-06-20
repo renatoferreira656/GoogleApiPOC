@@ -1,4 +1,4 @@
-package com.test.directions.controller;
+package com.test.googleapipoc.controller;
 
 import org.junit.jupiter.api.Test;
 

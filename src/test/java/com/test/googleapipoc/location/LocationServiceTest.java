@@ -1,13 +1,13 @@
-package com.test.directions.location;
+package com.test.googleapipoc.location;
 
-import com.test.directions.model.GeoPointStatus;
-import com.test.directions.model.Location;
-import com.test.directions.model.geocode.GeoCodeInfo;
-import com.test.directions.model.geocode.GeoCodeResults;
-import com.test.directions.model.geocode.GeoPoint;
-import com.test.directions.model.geocode.Geometry;
-import com.test.directions.service.HTTPService;
-import com.test.directions.service.LocationService;
+import com.test.googleapipoc.model.GeoPointStatus;
+import com.test.googleapipoc.model.Location;
+import com.test.googleapipoc.model.geocode.GeoCodeInfo;
+import com.test.googleapipoc.model.geocode.GeoCodeResults;
+import com.test.googleapipoc.model.geocode.GeoPoint;
+import com.test.googleapipoc.model.geocode.Geometry;
+import com.test.googleapipoc.service.HTTPService;
+import com.test.googleapipoc.service.LocationService;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collections;

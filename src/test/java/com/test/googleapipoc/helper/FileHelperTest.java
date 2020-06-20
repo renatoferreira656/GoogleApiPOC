@@ -1,4 +1,4 @@
-package com.test.directions.helper;
+package com.test.googleapipoc.helper;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.mock.web.MockMultipartFile;

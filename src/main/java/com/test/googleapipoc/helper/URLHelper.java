@@ -1,4 +1,4 @@
-package com.test.directions.helper;
+package com.test.googleapipoc.helper;
 
 import org.springframework.web.util.UriComponentsBuilder;
 
