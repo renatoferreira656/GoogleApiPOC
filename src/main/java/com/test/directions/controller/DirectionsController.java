@@ -20,12 +20,12 @@ public class DirectionsController {
     private DirectionsService directionsService;
 
     @GetMapping("/coordinates")
-    public Location coordinates(@RequestParam(value="location") String location) {
-        Location position = this.directionsService.findCoordinatesBy(location);
-        if(position == null){
+    public List<Location>  coordinates(@RequestParam(value="location") String location) {
+        List<Location> positions = this.directionsService.findCoordinatesBy(location);
+        if(positions == null || positions.isEmpty()){
             throw new NotFoundException("Not found");
         }
-        return position;
+        return positions;
     }
 
     @PostMapping("/coordinates/batch")
