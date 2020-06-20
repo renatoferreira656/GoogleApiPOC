@@ -4,8 +4,9 @@ _______
 
 ### Setup
 
-This application was built with SpringFramework stack, using JAVA `1.8.0_251`, 
-after java configure to start the web server just execute:
+This application use SpringFramework stack with JAVA `1.8.0_251`.
+
+With Java configured to start the web server just execute:
 
 #### Linux:
 ```
