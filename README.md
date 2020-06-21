@@ -49,7 +49,7 @@ http://localhost:8080
 ### API Description:
 
 #### `GET` /api/location/coordinates?location={TEXT}
-Request with `location` parameter as an open text.
+Request with `location` parameter as text.
 
 #### Example
 ###### Request:
@@ -71,7 +71,7 @@ Request with `location` parameter as an open text.
 ```
 
 #### `POST` /api/location/coordinates/batch
-Multipart request to upload an UTF-8 file with one address per line, example:
+Multipart request to upload a file with one address per line:
 
 ##### Example
 ###### Request file:
